@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macro-argentina-dashboard"
+version = "0.1.0"
+description = "Sistema de monitoreo macroeconómico en tiempo real: BCRA + INDEC"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.32.0",
+    "plotly>=5.20.0",
+    "pandas>=2.2.0",
+    "requests>=2.31.0",
+    "numpy>=1.26.0",
+    "statsmodels>=0.14.0",
+    "pyarrow>=15.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
